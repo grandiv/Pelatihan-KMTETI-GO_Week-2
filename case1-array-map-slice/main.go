@@ -18,7 +18,7 @@ func main() {
 
 	// Part 1: Mengapa terdapat error pada baris-baris kode berikut?
 	// 				 Perbaiki baris-baris berikut agar program dapat dijalankan
-	myArr := [5]uint{0, 1, 2, 4, 5, 6}
+	myArr := [6]uint{0, 1, 2, 4, 5, 6}
 
 	fmt.Println(myArr)
 	fmt.Println(myArr[5])
@@ -34,7 +34,8 @@ func main() {
 		"Johannes": 19,
 		"Imanuel":  20,
 	}
-
+	stdAge["Imanuel"] = 21
+	stdAge["Siska"] = 19
 	fmt.Println("Umur Imanuel tahun ini:", stdAge["Imanuel"])
 	fmt.Println("Siswa baru, Siska berumur:", stdAge["Siska"])
 	// -- End of Part 2 --
@@ -46,8 +47,9 @@ func main() {
 	var primes []int
 	for i := 10; i < 30; i++ {
 		if i%2 != 0 && i%3 != 0 && i%5 != 0 && i%7 != 0 {
+			primes = append(primes, i)
 		}
-		primes = append(primes, i)
+		
 	}
 
 	fmt.Println(primes)
